@@ -1,19 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
+import "@openzeppelin/contracts/access/Ownable.sol"; // Import Ownable contract
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol"; // Import IERC20 interface
 import "./token.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";  // Import Ownable contract
 
-contract Depo is Token, Ownable {  // Inherit from Ownable to get the onlyOwner modifier
+contract Depo is Token, Ownable {  // Inherit Ownable here
     event DepositedETH(address indexed owner, uint256 amount);
     event DepositedToken(address indexed token, address indexed owner, uint256 amount);
 
-    // Deposit ETH function with onlyOwner modifier inherited from Ownable
     function depositETH() external payable onlyOwner {
         emit DepositedETH(msg.sender, msg.value);
     }
 
-    // Deposit Token function with onlyOwner modifier inherited from Ownable
     function depositToken(address token, uint256 amount) external onlyOwner {
         require(allowedTokens[token], "Token not allowed");
         require(amount > 0, "Amount must be greater than 0");
