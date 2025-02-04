@@ -9,7 +9,7 @@ module.exports = {
   networks: {
     sepoliaBase: {
       url: sepoliaBaseRPC,  // Base Sepolia Testnet RPC URL
-      accounts: [`0x${privateKey}`],  // Replace with your private key
+      accounts: [privateKey],  // Directly use the private key without '0x'
     },
   },
 };
