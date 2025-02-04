@@ -6,6 +6,9 @@ const { privateKey } = require('./private-key');  // Import private key from pri
 
 module.exports = {
   solidity: "0.8.20",
+  paths: {
+    sources: "./contract",  // Yeh line add karein
+  },
   networks: {
     sepoliaBase: {
       url: sepoliaBaseRPC,  // Base Sepolia Testnet RPC URL
