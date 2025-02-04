@@ -1,4 +1,4 @@
 // private-key.js
 module.exports = {
-  privateKey: "YOUR_PRIVATE_KEY",  // Replace with your private key
+  privateKey: "0xYOUR_PRIVATE_KEY",  // Replace with your private key
 };
