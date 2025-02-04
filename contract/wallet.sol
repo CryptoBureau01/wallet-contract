@@ -2,8 +2,8 @@
 pragma solidity ^0.8.20;
 
 import "./token.sol";
-import "./depo.sol";
-import "./with.sol";
+import "./deposit.sol";
+import "./withdraw.sol";
 import "./list.sol";
 
 contract Wallet is Token, Depo, With, List {
