@@ -1,4 +1,6 @@
 require('@nomiclabs/hardhat-ethers'); 
+require('@nomicfoundation/hardhat-toolbox');
+require('@nomicfoundation/hardhat-verify');
 require('dotenv').config();  // Load environment variables from .env file
 
 module.exports = {
@@ -11,5 +13,8 @@ module.exports = {
       url: process.env.SEPOLIA_RPC_URL,  // Load from .env file
       accounts: [process.env.PRIVATE_KEY].filter(Boolean),  // Filter undefined values
     },
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY,  // Load API key from .env file
   },
 };
