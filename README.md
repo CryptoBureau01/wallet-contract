@@ -1,6 +1,6 @@
 # ERC-20 Wallet-Contract with CryptoBureau
 
-## This contract is an ERC-20 Wallet Contract that can be deployed on any ERC-20 compatible blockchain such as ETH, BNB, Polygon, Arbitrum, Base, and more. The contract includes a set of functions designed to facilitate easy management of native and token assets within the wallet.
+This contract is an ERC-20 Wallet Contract that can be deployed on any ERC-20 compatible blockchain such as ETH, BNB, Polygon, Arbitrum, Base, and more. The contract includes a set of functions designed to facilitate easy management of native and token assets within the wallet.
 
 _________________________________________________________________________________________________________________________________________________________________
 
@@ -91,41 +91,54 @@ By following these steps, you should be able to set up and deploy your ERC-20 Wa
 _________________________________________________________________________________________________________________________________________________________________
 
 
-## Functions:
-    1. Owner DepositNative
-      Allows the owner to deposit native cryptocurrency (like ETH, BNB, etc.) into the wallet.
+# **Wallet Contract Functions**  
 
-    2. Owner WithdrawNative
-      Allows the owner to withdraw native cryptocurrency from the wallet.
+This wallet contract is designed for long-term usability, allowing the owner to securely manage both native and token-based assets. The functions are structured for easy operation, whether depositing, withdrawing, or managing token allowances.  
 
-    3. Owner AddToken
-      Enables the owner to add new tokens to the wallet. This function is used for integrating additional ERC-20 tokens that the wallet will support.
+---
 
-    4. Owner RemoveToken
-      Allows the owner to remove tokens from the wallet that are no longer needed or supported.
+## **Functions Overview**  
 
-    5. Owner DepositToken
-      Enables the owner to deposit ERC-20 tokens into the wallet.
+### 1. **Owner DepositNative**  
+   - Allows the owner to deposit native cryptocurrency (e.g., ETH, BNB) into the wallet.  
 
-    6. Owner WithdrawToken
-      Allows the owner to withdraw ERC-20 tokens from the wallet.
+### 2. **Owner WithdrawNative**  
+   - Allows the owner to withdraw native cryptocurrency from the wallet.  
 
-    7. OwnerTransfer
-      Allows the owner to transfer ownership of the wallet to a new address.
+### 3. **Owner AddToken**  
+   - Enables the owner to add new ERC-20 tokens to the wallet.  
+   - Used for integrating additional tokens that the wallet will support.  
 
-    8. GetBalance
-      A public function to retrieve the wallet's balance of native cryptocurrency (ETH, BNB, etc.).
+### 4. **Owner RemoveToken**  
+   - Allows the owner to remove ERC-20 tokens that are no longer needed or supported.  
 
-    9. ViewBalance
-      A public function to view the balance of specific ERC-20 tokens stored in the wallet.
+### 5. **Owner DepositToken**  
+   - Enables the owner to deposit ERC-20 tokens into the wallet.  
 
-    10. AllowToken
-      This function checks whether a particular ERC-20 token is allowed and supported by the wallet.
+### 6. **Owner WithdrawToken**  
+   - Allows the owner to withdraw ERC-20 tokens from the wallet.  
 
-This wallet contract has been designed with long-term usability in mind, allowing the owner to manage native and token-based assets in a secure and efficient manner. The functions are structured to ensure easy operation, whether you are depositing, withdrawing, or managing token allowances.
+### 7. **Owner Transfer**  
+   - Allows the owner to transfer ownership of the wallet to a new address.  
 
-The contract is flexible and can be deployed on multiple blockchains that support ERC-20 tokens. You can add or remove tokens as required, and the wallet remains highly customizable for any user with ownership privileges.
+### 8. **GetBalance**  
+   - A public function to retrieve the wallet’s balance of native cryptocurrency (e.g., ETH, BNB).  
 
+### 9. **ViewBalance**  
+   - A public function to view the balance of specific ERC-20 tokens stored in the wallet.  
+
+### 10. **AllowToken**  
+   - Checks whether a particular ERC-20 token is allowed and supported by the wallet.  
+
+---
+
+## **Key Features**  
+
+- **Secure & Efficient**: The contract ensures smooth asset management while maintaining ownership control.  
+- **Flexible & Customizable**: Can be deployed on multiple blockchains that support ERC-20 tokens.  
+- **Token Management**: Owners can easily add or remove tokens as needed.  
+
+This contract provides a robust solution for managing digital assets securely while allowing seamless interactions with both native and ERC-20 tokens.
 _________________________________________________________________________________________________________________________________________________________________
 
 
