@@ -1,8 +1,6 @@
 require('@nomiclabs/hardhat-ethers');
 require('@nomiclabs/hardhat-waffle');
-
-const { sepoliaBaseRPC } = require('./testnet-rpc');  // Import RPC URL from testnet-rpc.js
-const { privateKey } = require('./private-key');  // Import private key from private-key.js
+require('dotenv').config();  // Load environment variables from .env file
 
 module.exports = {
   solidity: "0.8.20",
@@ -11,8 +9,8 @@ module.exports = {
   },
   networks: {
     sepoliaBase: {
-      url: sepoliaBaseRPC,  // Base Sepolia Testnet RPC URL
-      accounts: [privateKey],  // Directly use the private key without '0x'
+      url: process.env.SEPOLIA_RPC_URL,  // Load from .env file
+      accounts: [process.env.PRIVATE_KEY],  // Load private key from .env file
     },
   },
 };
