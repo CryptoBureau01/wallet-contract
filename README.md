@@ -24,14 +24,13 @@ First, you need to set your private key and the RPC URL of the network where you
   Linux User: If you are using Linux, navigate to the wallet-contract folder and run the `nano .env` command to edit the .env file.
 
   First, you need to configure three things in the .env file:
-
-    ### 1. Set Your Private Key
+    1. Set Your Private Key
         Enter your private key that will be used for deploying the contract.
-
-    ### 2. Set Your Deploy RPC
+        
+    2. Set Your Deploy RPC
         Explanation: You need to set the RPC URL for the network where you want to deploy your contract. This RPC URL is required for connecting to the specific blockchain network.
-
-    ### 3. Set Your API Key for Contract Verification
+        
+    3. Set Your API Key for Contract Verification
         To verify your contract, create an account on the network's explorer and obtain an API key. Once you have the API key, add it to the .env file. This API key will be used to verify your contract.
 
 
