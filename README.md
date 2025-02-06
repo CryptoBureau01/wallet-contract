@@ -25,19 +25,6 @@ First, you need to set your private key and the RPC URL of the network where you
 
   First, you need to configure three things in the .env file:
   
-    1. Set Your Private Key
-        Enter your private key that will be used for deploying the contract.
-    
-    2. Set Your Deploy RPC
-        Explanation: You need to set the RPC URL for the network where you want to deploy your contract. This RPC URL is required for connecting to the specific blockchain network.
-        
-    3. Set Your API Key for Contract Verification
-        To verify your contract, create an account on the network's explorer and obtain an API key. Once you have the API key, add it to the .env file. This API key will be used to verify your contract.
-
-
-  Example .env file format:
-
-  ```
   PRIVATE_KEY=your_private_key_here
   RPC_URL=https://your_rpc_url_here
   API_KEY=your_api_key_here
@@ -46,7 +33,6 @@ First, you need to set your private key and the RPC URL of the network where you
   Add your private key and RPC URL in the `.env` file like this:
 
   
-## Step 2. Run npm install
 
 After completing Step 1, you need to run `npm install` in your terminal.
 
