@@ -10,11 +10,11 @@ module.exports = {
   },  
   networks: {
     sepoliaBase: {
-      url: process.env.SEPOLIA_RPC_URL,  // Load from .env file
+      url: process.env.RPC_URL,  // Load from .env file
       accounts: [process.env.PRIVATE_KEY].filter(Boolean),  // Filter undefined values
     },
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,  // Load API key from .env file
+    apiKey: process.env.API_KEY,  // Load API key from .env file
   },
 };
