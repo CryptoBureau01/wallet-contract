@@ -9,72 +9,84 @@ ________________________________________________________________________________
 
 First, make sure that Node.js 20 is installed on your system. Run this command to check the version:
 
-  ```
+  ```bash
   node -v
   ```
 
 After that, follow these steps:
 
+---
 
 ## Step 1. Set Up the .env File
 
-First, you need to set your private key and the RPC URL of the network where you want to deploy the contract in the .env file.
+First, you need to set your private key and the RPC URL of the network where you want to deploy the contract in the `.env` file.
 
-  Windows User: If you are using a Windows system, open the wallet-contract folder in VS Code and edit the `.env` file.
-  Linux User: If you are using Linux, navigate to the wallet-contract folder and run the `nano .env` command to edit the .env file.
+- **Windows User**: If you are using a Windows system, open the `wallet-contract` folder in VS Code and edit the `.env` file.
+- **Linux User**: If you are using Linux, navigate to the `wallet-contract` folder and run the `nano .env` command to edit the `.env` file.
 
-  First, you need to configure three things in the .env file:
-  
-  PRIVATE_KEY=your_private_key_here
-  RPC_URL=https://your_rpc_url_here
-  API_KEY=your_api_key_here
-  ```
+You need to configure three things in the `.env` file:
 
-  Add your private key and RPC URL in the `.env` file like this:
+```env
+# Your private key for deploying the contract
+PRIVATE_KEY=your_private_key_here
 
-  
+# RPC URL of the network you want to deploy your contract on
+RPC_URL=https://your_rpc_url_here
+
+# API key for contract verification (obtain it from the network's explorer)
+API_KEY=your_api_key_here
+```
+
+---
+
+## Step 2. Install Dependencies
 
 After completing Step 1, you need to run `npm install` in your terminal.
 
-  Windows User: If you're using Windows, open the terminal in VS Code within the `wallet-contract` folder and run the command.
-  Linux User: If you're using Linux, open the terminal within the `wallet-contract` folder and run the command.
+- **Windows User**: If you're using Windows, open the terminal in VS Code within the `wallet-contract` folder and run the command.
+- **Linux User**: If you're using Linux, open the terminal within the `wallet-contract` folder and run the command.
 
-  ```
-  npm install
-  ```
+```bash
+npm install
+```
 
 This will install all the dependencies listed in the `package.json` file.
 
+---
 
-## Step 3: Compile and Deploy the Contract
+## Step 3. Compile and Deploy the Contract
 
 After installing the dependencies, you'll need to compile and deploy your contract to the blockchain.
 
-  ### 1. Compile the Contract: Run the following command to compile your contract:
+### 1. Compile the Contract:
 
-          ```
-          npx hardhat compile
-          ```
+Run the following command to compile your contract:
 
-  ### 2. Then, deploy the contract by running this command:
+```bash
+npx hardhat compile
+```
 
-          ```
-          npx hardhat run scripts/deploy.js --network your_network_name
-          ```
+### 2. Deploy the Contract:
 
-          Replace `your_network_name` with the name of the network defined in your `hardhat.config.js`.
+Then, deploy the contract by running this command:
 
+```bash
+npx hardhat run scripts/deploy.js --network your_network_name
+```
 
-  ### 3. Verify the Contract
+Replace `your_network_name` with the name of the network defined in your `hardhat.config.js`.
 
-         If you want to verify your contract on Etherscan or another blockchain explorer, you can run the following command:
+### 3. Verify the Contract:
 
-         ```
-         npx hardhat verify --network your_network_name <contract_address>
-         ```
+If you want to verify your contract on Etherscan or another blockchain explorer, you can run the following command:
+
+```bash
+npx hardhat verify --network your_network_name <contract_address>
+```
+
+---
 
 By following these steps, you should be able to set up and deploy your ERC-20 Wallet Contract using `Node.js` and `Hardhat`. Make sure your `.env` file is correctly configured and dependencies are installed before proceeding with contract deployment.
-
 
 _________________________________________________________________________________________________________________________________________________________________
 
